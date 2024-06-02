@@ -3,25 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Theme */
+  --primary-text: #000000;
+  --secondary-text: #696969;
+  --tertiary-text: #c7c7c7;
+  --link: #0095f6;
+  --link-hover: #01376b;
+  --background: #ffffff;
+  --background-hover: #f2f2f2;
+  --borders: #dbdbdb;
+  --highlight-background: #efefef;
+  --placeholder: #9ca3af;
+  --primary-button: #0095f6;
+  --primary-button-hover: #1877f2;
+  --secondary-background: #fafafa;
+  --tertiary-background: rgb(50, 50, 50);
+  --banner-background: #ffffff;
+  --hover-overlay: rgba(0, 0, 0, 0.05);
+  --stroke: #f4f4f4;
+  --elevated-separator: rgb(54, 54, 54);
+
+  /* Misc */
+  --nav-height: 5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-text: #f5f5f5;
+    --secondary-text: #a8a8a8;
+    --tertiary-text: #737373;
+    --link: #0095f6;
+    --link-hover: #e0f1ff;
+    --background: #000000;
+    --background-hover: #1a1a1a;
+    --borders: #262626;
+    --highlight-background: #262626;
+    --placeholder: #9ca3af;
+    --primary-button: #0095f6;
+    --primary-button-hover: #1877f2;
+    --secondary-background: #121212;
+    --tertiary-background: #0b0b0b;
+    --banner-background: #262626;
+    --hover-overlay: rgba(255, 255, 255, 0.1);
+    --stroke: #353535;
+    --elevated-separator: rgb(54, 54, 54);
+
+    /* Misc */
+    --nav-height: 6rem;
   }
 }
 
+/* Hide scrollbar */
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-background text-white;
+}
+
+.wrapper {
+  @apply px-4 sm:px-10;
 }
